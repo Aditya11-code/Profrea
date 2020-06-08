@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Css -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<div class="page-content">
+		<div class="wizard-v2-content">
+			<div class="wizard-form">
+				<div class="wizard-header">
+					<h3>Registration</h3>
+				</div>
+		        <form class="registration-form" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>1</h2>
+			            <section>
+										<span style="font-size:22px;font-weight:600;">Basic Info</span>
+			                <div class="part-division">
+												<div class="row">
+													<div class="form-holder">
+														<h4>First Name</h4>
+														<input type="text" placeholder="First Name" id="first_name" required>
+													</div>
+													<div class="form-holder">
+														<h4>Last Name</h4>
+														<input type="text" placeholder="Last Name" class="" id="last_name" required>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder">
+														<h4>Phone Number</h4>
+														<input type="tel" placeholder="Phone Number" id="phone" required>
+													</div>
+													<div class="form-holder">
+														<h4>Email</h4>
+														<input type="email" placeholder="Email" class="" id="email" required>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder">
+														<h4>Date of Birth</h4>
+														<input type="date" name="date" class="date" id="DOB" required>
+													</div>
+													<div class="form-holder">
+														<h4>Nationality</h4>
+														<input type="text" name="nationality" id="nationality" placeholder="Nationality"required>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder" style="margin-top:80px;">
+														<input type="file" id="profile-pic" class="profilepic" name="profile pic" onchange="updateImageDisplay()">
+
+														<span style="font-size:12px;"><b>Note:</b>*Resolution should be b/w 400 to 800 px and size b/w 60Kb to 200 Kb.</span>
+													</div>
+													<div class="form-holder">
+														<div class="display-file"></div>
+													</div>
+
+												</div>
+											</div>
+			            </section>
+
+
+
+						<!-- SECTION 2 -->
+			            <h2>2</h2>
+			            <section>
+										<h3>Contact Details</h3>
+			                <div class="part-division">
+												<h4>Mail Address</h4>
+												<div class="row">
+													<div class="form-holder form-holder-2">
+														<input type="text" name="addressline1" id="t-adrrs-1" placeholder="Address Line 1">
+														<input type="text" name="addressline2" id="t-adrrs-2" placeholder="Address Line 2" style="margin-top:10px;">
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder">
+														<h4>City</h4>
+														<input type="text"  id="t-city" name="city" placeholder="City">
+													</div>
+													<div class="form-holder">
+														<h4>State</h4>
+														<select name="state" id="t-state" required>
+															<option value="state" selected>State</option>
+															<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+															<option value="Andhra Pradesh">Andhra Pradesh</option>
+															<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+															<option value="Assam">Assam</option>
+															<option value="Bihar">Bihar</option>
+															<option value="Chandigarh">Chandigarh</option>
+															<option value="Chattisgarh">Chattisgarh</option>
+															<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+															<option value="Daman and Diu">Daman and Diu</option>
+															<option value="Delhi">Delhi</option>
+															<option value="Goa">Goa</option>
+															<option value="Gujarat">Gujarat</option>
+															<option value="Haryana">Haryana</option>
+															<option value="Himachal Pradesh">Himachal Pradesh</option>
+															<option value="Jammu and Kashmir ">Jammu and Kashmir</option>
+															<option value="Jharkhand">Jharkhand</option>
+															<option value="Karnataka">Karnataka</option>
+															<option value="Kerala">Kerala</option>
+															<option value="Lakshadweep">Lakshadweep</option>
+															<option value="Madhya Pradesh">Madhya Pradesh</option>
+															<option value="Maharashtra">Maharashtra</option>
+															<option value="Manipur">Manipur</option>
+															<option value="Meghalaya">Meghalaya</option>
+															<option value="Mizoram">Mizoram</option>
+															<option value="Nagaland">Nagaland</option>
+															<option value="Orissa">Orissa</option>
+															<option value="Pondicherry">Pondicherry</option>
+															<option value="Punjab">Punjab</option>
+															<option value="Rajasthan">Rajasthan</option>
+															<option value="Sikkim">Sikkim</option>
+															<option value="Tamil Nadu">Tamil Nadu</option>
+															<option value="Telangana">Telangana</option>
+															<option value="Tripura">Tripura</option>
+															<option value="Uttar Pradesh">Uttar Pradesh</option>
+															<option value="Uttarakhand">Uttarakhand</option>
+															<option value="West Bengal">West Bengal</option>
+
+														</select>
+													</div>
+												</div>
+
+														<h3>Permanent Address</h3>
+															<input type="checkbox" onchange="copyAdd()"><span class="copy">Same as Mail Address</span>
+
+
+												<div class="row" style="margin-top:15px;">
+													<div class="form-holder form-holder-2">
+														<input type="text" name="addressline1" id="p-adrrs-1" placeholder="Address Line 1">
+														<input type="text" name="addressline2" id="p-adrrs-2" placeholder="Address Line 2" style="margin-top:10px;">
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder">
+														<h4>City</h4>
+														<input type="text" id="p-city" name="city" placeholder="City">
+													</div>
+													<div class="form-holder">
+														<h4>State</h4>
+														<select name="state" id="p-state" required>
+															<option value="state" selected>State</option>
+															<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+															<option value="Andhra Pradesh">Andhra Pradesh</option>
+															<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+															<option value="Assam">Assam</option>
+															<option value="Bihar">Bihar</option>
+															<option value="Chandigarh">Chandigarh</option>
+															<option value="Chattisgarh">Chattisgarh</option>
+															<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+															<option value="Daman and Diu">Daman and Diu</option>
+															<option value="Delhi">Delhi</option>
+															<option value="Goa">Goa</option>
+															<option value="Gujarat">Gujarat</option>
+															<option value="Haryana">Haryana</option>
+															<option value="Himachal Pradesh">Himachal Pradesh</option>
+															<option value="Jammu and Kashmir ">Jammu and Kashmir</option>
+															<option value="Jharkhand">Jharkhand</option>
+															<option value="Karnataka">Karnataka</option>
+															<option value="Kerala">Kerala</option>
+															<option value="Lakshadweep">Lakshadweep</option>
+															<option value="Madhya Pradesh">Madhya Pradesh</option>
+															<option value="Maharashtra">Maharashtra</option>
+															<option value="Manipur">Manipur</option>
+															<option value="Meghalaya">Meghalaya</option>
+															<option value="Mizoram">Mizoram</option>
+															<option value="Nagaland">Nagaland</option>
+															<option value="Orissa">Orissa</option>
+															<option value="Pondicherry">Pondicherry</option>
+															<option value="Punjab">Punjab</option>
+															<option value="Rajasthan">Rajasthan</option>
+															<option value="Sikkim">Sikkim</option>
+															<option value="Tamil Nadu">Tamil Nadu</option>
+															<option value="Telangana">Telangana</option>
+															<option value="Tripura">Tripura</option>
+															<option value="Uttar Pradesh">Uttar Pradesh</option>
+															<option value="Uttarakhand">Uttarakhand</option>
+															<option value="West Bengal">West Bengal</option>
+
+														</select>
+													</div>
+												</div>
+											</div>
+			            </section>
+
+									<!-- Section 4 -->
+									<h2>3</h2>
+			            <section>
+			                <div class="part-division">
+												<h3>Education</h3>
+												<div class="row">
+													<div class="form-holder form-holder-2">
+
+													<input type="text" id="high-edu" name="higher Education" placeholder="Higher Education" onkeyup="filterFunction()">
+
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-holder">
+														<h4>Resume</h4>
+														<input type="file" id="resume" class="resume" name="resume">
+													</div>
+
+													<div class="form-holder">
+														<h4>Education Docs</h4>
+														<input type="file" id="education-docs" class="educationdocs" name="education docs" multiple >
+														<span style="font-size:12px;"><b>*Multiple files can be selected</b></span>
+													</div>
+												</div>
+											</div>
+			            </section>
+
+
+			            <!-- SECTION 4 -->
+			            <h2>4</h2>
+			            <section>
+			                <div class="part-division">
+												<h3>Preview</h3>
+												<div class="row table-responsive">
+													<table class="table">
+															<tr class="space-row">
+																<th>Full Name:</th>
+																<td id="fullname-val"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Profile Pic</th>
+																<td id="picinpreview"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Date Of Birth</th>
+																<td id="pre-dob"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Phone:</th>
+																<td id="phone-val"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Email:</th>
+																<td id="email-val"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Nationality</th>
+																<td id="citizen"></td>
+															</tr>
+															<tr class="space-row">
+																<th>Higher Education</th>
+																<td id="high-edu"></td>
+															</tr>
+															<tr class="space-row">
+																<th> Mail Address </th>
+																<td id="t-address"></td>
+															</tr>
+															<tr class="space-row">
+																<th>City , State </th>
+																<td id="t-cityState"></td>
+															</tr>
+
+															<tr class="space-row">
+																<th> Permanent Address </th>
+																<td id="p-address"></td>
+															</tr>
+															<tr class="space-row">
+																<th>City , State  </th>
+																<td id="p-cityState"></td>
+															</tr>
+
+
+													</table>
+												</div>
+											</div>
+			            </section>
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="jquery.steps.js"></script>
+	<script src="main.js"></script>
+	<script>
+
+	function updateImageDisplay() {
+
+			const input = document.getElementById('profile-pic');
+			const preview = document.querySelector('.display-file');
+			const picinpreview = document.getElementById('picinpreview');
+  while(preview.firstChild) {
+    preview.removeChild(preview.firstChild);
+  }
+	preview.style.backgroundColor = "none";
+	const curFiles = input.files;
+	const file = curFiles.item(0);
+	if (file.size >= (200*1024)) {
+      alert(
+        "File too Big, please select a file less than 200KB");
+  } else if (file.size < (60 * 1024)) {
+      alert(
+        "File too small, please select a file greater than 60KB");
+} else {
+    const image = document.createElement('img');
+		const image2 = document.createElement('img');
+
+
+		image.src = URL.createObjectURL(file);
+		image2.src = URL.createObjectURL(file);
+		var reader = new FileReader();
+  reader.onload = function (e) {
+      var img = new Image();
+      img.src = e.target.result;
+
+      img.onload = function () {
+          var w = this.width;
+          var h = this.height;
+					if( h > 800 || w > 800 ){
+						alert("File resolution too big");
+						input.value = "";
+					}else if(h < 400 || w < 400 ){
+						alert("File resolution too small");
+			}else{
+					image.height = 210;
+					image2.height = 210;
+
+					preview.appendChild(image);
+					picinpreview.appendChild(image2);
+
+		}
+
+      }
+  };
+  reader.readAsDataURL(file);
+
+}
+}
+
+
+// copy address
+function copyAdd(){
+	var u = document.getElementById('t-adrrs-1').value;
+	var v = document.getElementById('t-adrrs-2').value;
+	var x = document.getElementById('t-city').value;
+	var y = document.getElementById('t-state').value;
+	document.getElementById('p-adrrs-1').value = u;
+	document.getElementById('p-adrrs-2').value = v;
+	document.getElementById('p-city').value = x;
+	document.getElementById('p-state').value = y;
+}
+	</script>
+
+
+</body>
+</html>
